@@ -34,11 +34,11 @@
                         <hr class="mt-2">
                         <!-- User Action Buttons  -->
                         <div class="mt-5 grid grid-cols-3 gap-5">
-                            <button class="border border-blue-500 p-2 rounded font-semibold">
+                            <button id="add-money-btn" class="border border-blue-500 p-2 rounded font-semibold">
                                 <img class="w-7 mx-auto pb-2" src="img/wallet.png" alt="">Add Moeny
                             </button>
 
-                            <button class="border border-blue-500 p-2 rounded font-semibold">
+                            <button id="cashout-btn" class="border border-blue-500 p-2 rounded font-semibold">
                                 <img class="w-7 mx-auto pb-2" src="img/wallet.png" alt="">Cashout
                             </button>
 
@@ -61,38 +61,69 @@
                         </div>
 
                         <!-- Add money -->
-                        <h3 class="text-xl font-bold mt-3">Add Money</h3>
-                        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-sm border mx-auto mt-5">
-                            <form class="card-body p-3">
-                                <select class="select select-bordered w-full" required>
-                                    <option disabled selected>Select Bank</option>
-                                    <option>Sonali Bank PLC</option>
-                                    <option>Rupali Bank PLC</option>
-                                    <option>Brac Bank PLC</option>
-                                    <option>Islami Bank Bangladesh PLC</option>
-                                </select>
-                                <div class="form-control">
-                                    <input type="number" placeholder="Account number" class="input input-bordered"
-                                        required />
-                                </div>
-                                <div class="form-control">
-                                    <input type="number" placeholder="Amount" id="amount" class="input input-bordered" required />
-                                </div>
-                                <div class="form-control">
-                                    <input type="password" placeholder="PIN" id="pin" class="input input-bordered" required />
-                                </div>
-                                <div class="form-control mt-6">
-                                    <button id="add-money" class="btn btn-primary">Add money</button>
-                                </div>
-                            </form>
+
+                        <div id="container-add-money">
+                            <h3 class="text-xl font-bold mt-5">Add Money</h3>
+                            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-sm border mx-auto mt-5">
+                                <form class="card-body p-3">
+                                    <select class="select select-bordered w-full" required>
+                                        <option disabled selected>Select Bank</option>
+                                        <option>Sonali Bank PLC</option>
+                                        <option>Rupali Bank PLC</option>
+                                        <option>Brac Bank PLC</option>
+                                        <option>Islami Bank Bangladesh PLC</option>
+                                    </select>
+                                    <div class="form-control">
+                                        <input type="number" placeholder="Account number" class="input input-bordered"
+                                            required />
+                                    </div>
+                                    <div class="form-control">
+                                        <input type="number" placeholder="Amount" id="amount"
+                                            class="input input-bordered" required />
+                                    </div>
+                                    <div class="form-control">
+                                        <input type="password" placeholder="PIN" id="pin" class="input input-bordered"
+                                            required />
+                                    </div>
+                                    <div class="form-control mt-6">
+                                        <button id="add-money" class="btn btn-primary">Add money</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Cashout money -->
+
+                        <div id="container-cashout">
+                            <h3 class="text-xl font-bold mt-5">Cashout</h3>
+                            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-sm border mx-auto mt-5">
+                                <form class="card-body p-3">
+                                    <div class="form-control">
+                                        <input type="number" placeholder="Agent number" class="input input-bordered"
+                                            required />
+                                    </div>
+                                    <div class="form-control">
+                                        <input type="number" placeholder="Amount" id="cashout-amount"
+                                            class="input input-bordered" required />
+                                    </div>
+                                    <div class="form-control">
+                                        <input type="password" placeholder="PIN" id="cashout-pin" class="input input-bordered"
+                                            required />
+                                    </div>
+                                    <div class="form-control mt-6">
+                                        <button id="withdraw-btn" class="btn btn-primary">Cashout</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
+    <script src="js/min.js"></script>
     <script src="js/add-money.js"></script>
+    <script src="js/cashout.js"></script>
 </body>
 
 </html>
